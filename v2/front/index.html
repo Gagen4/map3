@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="map-container">
+    <div id="map"></div>
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search location...">
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="tools">
+        <button id="add-marker" title="Add marker">M</button>
+        <button id="add-line" title="Add line">L</button>
+        <button id="add-polygon" title="Add polygon">P</button>
+        <button id="delete-object" title="Delete object">D</button>
+        <button id="clear-all" title="Clear all">C</button>
+      </div>
+      <div class="save-load">
+        <input type="text" id="save-file-name" placeholder="File name...">
+        <button id="save-map" title="Save map">Save</button>
+        <select id="load-file-name">
+          <option value="">Select file...</option>
+        </select>
+        <button id="load-map" title="Load map">Load</button>
+      </div>
+      <div class="coordinates">
+        Latitude: <span id="lat">0</span>, Longitude: <span id="lng">0</span>
+      </div>
+      <div id="help-text" style="font-size: 12px; color: #333; margin-top: 5px;"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
